@@ -2,6 +2,12 @@
 
 - hosts: Database
   tasks: 
+        - name: echo some file
+          shell: "ls /tmp/file1"
+          register: results
+        - debug: 
+               var: results
+               
         - name: To copy file
           copy: 
                 src: /tmp/file1
