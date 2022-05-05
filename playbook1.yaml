@@ -1,9 +1,9 @@
 ---
 
-- hosts: Database
+- hosts: all
   tasks: 
         - name: echo some file
-          shell: "cp /tmp/file1 file2"
+          shell: " id && cp /tmp/file1 file2"
           register: results
         - debug: 
                var: results
