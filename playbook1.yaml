@@ -1,7 +1,7 @@
 ---
 
 - hosts: Database
-    tasks: 
+  tasks: 
         - name: echo some file
           shell: "ls /tmp/file1"
           register: results
