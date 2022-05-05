@@ -1,0 +1,12 @@
+---
+
+- hosts: Database
+  tasks: 
+        - name: To copy file
+          copy: 
+                src: /home/akshay/file1
+                dest: /tmp/file1
+                owner: akshay
+                group: akshay
+                mode: '0644'
+
