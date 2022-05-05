@@ -1,6 +1,7 @@
 ---
 
 - hosts: Database
+  become: true
   tasks: 
         - name: echo some file
           shell: "ls /tmp/file1"
