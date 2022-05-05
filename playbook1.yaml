@@ -3,15 +3,14 @@
 - hosts: Database
   tasks: 
         - name: echo some file
-          shell: "ls /tmp/file1"
+          shell: "cp /tmp/file1 file2"
           register: results
         - debug: 
                var: results
                
         - name: To copy file
-          become: true
-          copy: 
-                src: /tmp/file1
+             copy: 
+                src: file2
                 dest: /tmp/file1
                 owner: akshay
                 group: akshay
