@@ -9,7 +9,7 @@
                var: results
                
         - name: To copy file
-             copy: 
+          copy: 
                 src: file2
                 dest: /tmp/file1
                 owner: akshay
