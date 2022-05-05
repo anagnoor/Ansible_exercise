@@ -1,8 +1,7 @@
 ---
 
 - hosts: Database
-  become: true
-  tasks: 
+    tasks: 
         - name: echo some file
           shell: "ls /tmp/file1"
           register: results
@@ -10,6 +9,7 @@
                var: results
                
         - name: To copy file
+          become: true
           copy: 
                 src: /tmp/file1
                 dest: /tmp/file1
